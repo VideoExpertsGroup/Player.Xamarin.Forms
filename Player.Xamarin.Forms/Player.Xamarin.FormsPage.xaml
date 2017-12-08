@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:Player.Xamarin.Forms" 
+    x:Class="Player.Xamarin.Forms.Player_Xamarin_FormsPage">
+
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS" Value="4,40,4,4"/>
+            <On Platform="Android" Value="20"/>
+        </OnPlatform>
+    </ContentPage.Padding>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="100" />
+            <ColumnDefinition Width="100" />
+        </Grid.ColumnDefinitions>
+
+        <Entry x:Name="URL_editbox" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="rtsp://184.72.239.149/vod/mp4:BigBuckBunny_115k.mov" />
+        <Button x:Name="Connect_btn" Grid.Row="0" Grid.Column="2" Text="Connect" Clicked="Connect_btn_click" />
+
+
+        <Label x:Name="Debug_lbl" Grid.Row="1" Grid.Column="0" Text="Debug" />
+        <Button x:Name="Screenshot_btn" Grid.Row="1" Grid.Column="1" Text="Screenshot" Clicked="ScreenShot_btn_click" IsEnabled="false" />
+        <Button x:Name="Record_btn" Grid.Row="1" Grid.Column="2" Text="Record" Clicked="Record_btn_click" IsEnabled="false" />
+
+
+        <local:MediaPlayerView x:Name="Video_view" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" BackgroundColor="Black" />
+        <Image x:Name="ScreenShot_view" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" IsVisible="false" BackgroundColor="Aqua"/>
+        
+        
+    </Grid>
+
+
+    
+</ContentPage>
