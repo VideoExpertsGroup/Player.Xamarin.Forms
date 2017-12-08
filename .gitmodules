@@ -1,6 +1,6 @@
-[submodule "VXG.Media.SDK.Android"]
-	path = VXG.Media.SDK.Android
-	url = https://github.com/VideoExpertsGroup/VXG.Media.SDK.Android.git
 [submodule "VXG.Media.SDK.iOS"]
 	path = VXG.Media.SDK.iOS
 	url = https://github.com/VideoExpertsGroup/VXG.Media.SDK.iOS.git
+[submodule "VXG.Media.SDK.Android"]
+	path = VXG.Media.SDK.Android
+	url = https://github.com/VideoExpertsGroup/VXG.Media.SDK.Android.git
